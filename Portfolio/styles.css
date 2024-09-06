@@ -1,0 +1,213 @@
+/* Import a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.profile-pic {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 60px; /* Adjust based on header height */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 999; /* Ensure it sits above other content */
+    color: white;
+    text-align: center;
+}
+
+.marquee p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    animation: scrollText 10s linear infinite, colorTransition 5s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes colorTransition {
+    0% { color: #f39c12; }
+    25% { color: #e74c3c; }
+    50% { color: #9b59b6; }
+    75% { color: #3498db; }
+    100% { color: #f39c12; }
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #3498db, #2ecc71); /* Vibrant gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 80px; /* Adjust for marquee space */
+}
+
+.hero-content {
+    z-index: 2;
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff; /* Text color for better contrast */
+}
+
+/* Background for Services section */
+#services {
+    background: navy;
+}
+
+.services-content {
+    background-color: #1e90ff; /* Bright blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff; /* White text color */
+}
+
+.services ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.services li {
+    margin-bottom: 15px; /* Space between items */
+    transition: transform 0.3s;
+}
+
+.services li:hover {
+    transform: scale(1.05);
+}
+
+/* Background for Contact section */
+#contact {
+    background: #2c3e50; /* Dark navy blue */
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff; /* White color for icons */
+}
+
+.contact-item span {
+    color: #fff; /* White color for text */
+}
+
+.contact-item a {
+    color: #00f; /* Light blue color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
